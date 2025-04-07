@@ -11,9 +11,9 @@ final readonly class Amount implements JsonSerializable
     private string $value;
 
     public function __construct(
-        string $balance,
+        string $amount,
     ) {
-        $this->value = $balance;
+        $this->value = $amount;
     }
 
     public function __toString(): string
