@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Context\API\Domain\ValueObject;
+namespace API\Domain\ValueObject;
 
 use JsonSerializable;
+use Stringable;
 
-final readonly class Amount implements JsonSerializable
+final readonly class Amount implements JsonSerializable, Stringable
 {
     private string $value;
 

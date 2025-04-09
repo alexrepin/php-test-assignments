@@ -1,0 +1,14 @@
+/vendor/
+.DS_Store
+.idea
+/.fleet
+/.idea
+/.vscode
+phpstan.neon
+/phpunit.xml
+.phpunit.result.cache
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+.bash_history
+.cache
+.composer

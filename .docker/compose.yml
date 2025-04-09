@@ -1,0 +1,12 @@
+name: "php-test-assignments"
+services:
+  app:
+    container_name: "php-test-assignments-app"
+    build:
+      dockerfile: .docker/Dockerfile
+      context: ../.
+    tty: true
+    volumes:
+      - ..:/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
