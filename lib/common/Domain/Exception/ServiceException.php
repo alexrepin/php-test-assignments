@@ -7,7 +7,7 @@ namespace Common\Domain\Exception;
 use API\Domain\Type\ExceptionCode;
 use Exception;
 
-final class ServiceException extends Exception
+class ServiceException extends Exception
 {
     public function __construct()
     {
