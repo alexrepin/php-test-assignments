@@ -14,7 +14,7 @@ use Common\Domain\Exception\ServiceException;
 interface FeeServiceInterface
 {
     /**
-     * Возвращает процент комисии в случае, если у пользователя она имеется
+     * Возвращает процент (в диапазоне от 1 до 100) комисии в случае, если у пользователя она имеется
      *
      * @throws ServiceException
      *
