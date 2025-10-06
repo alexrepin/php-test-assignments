@@ -62,13 +62,13 @@ readonly class Transaction implements DomainEntityInterface
     public function jsonSerialize(): array
     {
         return [
-            'uuid' => $this->uuid,
-            'account' => $this->account,
-            'amount' => $this->amount,
-            'type' => $this->type,
-            'direction' => $this->direction,
-            'currency' => $this->currency,
-            'parent' => $this->parent,
+            'uuid' => (string) $this->getUUID(),
+            'account' => (string) $this->account,
+            'amount' => (string) $this->amount,
+            'type' => $this->type->value,
+            'direction' => $this->direction->value,
+            'currency' => $this->currency->value,
+            'parent' => $this->parent?->jsonSerialize() ?? null,
         ];
     }
 }

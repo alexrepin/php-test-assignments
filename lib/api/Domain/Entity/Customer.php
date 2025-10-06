@@ -36,8 +36,8 @@ readonly class Customer implements DomainEntityInterface
     public function jsonSerialize(): array
     {
         return [
-            'uuid' => $this->uuid,
-            'status' => $this->status,
+            'uuid' => (string) $this->getUUID(),
+            'status' => $this->getStatus()->value,
             'accounts' => $this->accounts->toArray(),
         ];
     }
