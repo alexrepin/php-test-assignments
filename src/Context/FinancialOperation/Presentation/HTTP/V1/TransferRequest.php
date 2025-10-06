@@ -9,6 +9,9 @@ use API\Domain\ValueObject\UUID;
 
 final readonly class TransferRequest
 {
+    /**
+     * from и to — UUID счетов (Account)
+     */
     public function __construct(
         private UUID $from,
         private UUID $to,
