@@ -19,10 +19,6 @@ interface BalanceServiceInterface
      *
      * @throws ServiceException
      * @throws AccountNotFoundException
-     *
-     * @param UUID $account
-     *
-     * @return Amount|null
      */
     public function getByUUID(UUID $account): ?Amount;
 
@@ -31,11 +27,6 @@ interface BalanceServiceInterface
      *
      * @throws ServiceException
      * @throws AccountNotFoundException
-     *
-     * @param UUID $account
-     * @param Amount $amount
-     *
-     * @return void
      */
     public function debit(UUID $account, Amount $amount): void;
 
@@ -44,11 +35,6 @@ interface BalanceServiceInterface
      *
      * @throws ServiceException
      * @throws AccountNotFoundException
-     *
-     * @param UUID $account
-     * @param Amount $amount
-     *
-     * @return void
      */
     public function credit(UUID $account, Amount $amount): void;
 }

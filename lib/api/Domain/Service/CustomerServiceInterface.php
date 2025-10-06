@@ -19,10 +19,6 @@ interface CustomerServiceInterface
      *
      * @throws CustomerNotFoundException
      * @throws ServiceException
-     *
-     * @param UUID $uuid
-     *
-     * @return Customer|null
      */
-    public function getByUUID(UUID $uuid): ?Customer;
+    public function getByUUID(UUID $uuid): Customer;
 }

@@ -10,7 +10,7 @@ use Ramsey\Uuid\Uuid as RamseyUUID;
 use Ramsey\Uuid\UuidInterface;
 use Stringable;
 
-final readonly class UUID implements JsonSerializable, Stringable
+readonly class UUID implements JsonSerializable, Stringable
 {
     private UuidInterface $value;
 

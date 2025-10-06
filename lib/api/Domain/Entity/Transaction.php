@@ -4,18 +4,22 @@ declare(strict_types=1);
 
 namespace API\Domain\Entity;
 
+use API\Domain\Type\CurrencyType;
+use API\Domain\Type\TransactionDirectionType;
 use API\Domain\Type\TransactionType;
 use API\Domain\ValueObject\Amount;
 use API\Domain\ValueObject\UUID;
 use Common\Domain\Entity\DomainEntityInterface;
 
-final readonly class Transaction implements DomainEntityInterface
+readonly class Transaction implements DomainEntityInterface
 {
     public function __construct(
         private UUID $uuid,
         private UUID $account,
         private Amount $amount,
         private TransactionType $type,
+        private TransactionDirectionType $direction,
+        private CurrencyType $currency,
         private ?UUID $parent = null,
     ) {
     }
@@ -45,6 +49,16 @@ final readonly class Transaction implements DomainEntityInterface
         return $this->parent;
     }
 
+    public function getDirection(): TransactionDirectionType
+    {
+        return $this->direction;
+    }
+
+    public function getCurrency(): CurrencyType
+    {
+        return $this->currency;
+    }
+
     public function jsonSerialize(): array
     {
         return [
@@ -52,6 +66,8 @@ final readonly class Transaction implements DomainEntityInterface
             'account' => $this->account,
             'amount' => $this->amount,
             'type' => $this->type,
+            'direction' => $this->direction,
+            'currency' => $this->currency,
             'parent' => $this->parent,
         ];
     }

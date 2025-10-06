@@ -9,7 +9,7 @@ use API\Domain\Type\CustomerStatus;
 use API\Domain\ValueObject\UUID;
 use Common\Domain\Entity\DomainEntityInterface;
 
-final readonly class Customer implements DomainEntityInterface
+readonly class Customer implements DomainEntityInterface
 {
     public function __construct(
         private UUID $uuid,

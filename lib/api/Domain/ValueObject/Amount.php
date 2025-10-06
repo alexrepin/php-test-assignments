@@ -7,7 +7,7 @@ namespace API\Domain\ValueObject;
 use JsonSerializable;
 use Stringable;
 
-final readonly class Amount implements JsonSerializable, Stringable
+readonly class Amount implements JsonSerializable, Stringable
 {
     private string $value;
 

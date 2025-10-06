@@ -7,7 +7,7 @@ namespace API\Domain\Entity;
 use API\Domain\ValueObject\UUID;
 use Common\Domain\Entity\DomainEntityInterface;
 
-final readonly class Account implements DomainEntityInterface
+readonly class Account implements DomainEntityInterface
 {
     public function __construct(
         private UUID $uuid,

@@ -17,10 +17,6 @@ interface TransactionServiceInterface
      * Возвращает транзакцию по идентификатору
      *
      * @throws ServiceException
-     *
-     * @param UUID $transaction
-     *
-     * @return ?Transaction
      */
     public function getByUUID(UUID $transaction): ?Transaction;
 
@@ -28,10 +24,6 @@ interface TransactionServiceInterface
      * Создает транзакцию
      *
      * @throws ServiceException
-     *
-     * @param Transaction $transaction
-     *
-     * @return void
      */
     public function create(Transaction $transaction): void;
 }
